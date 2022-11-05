@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import SportsNav from './components/SportsNav'
 import './App.css';
 import Homepage from './components/pages/Homepage.jsx'
+import Scores from './components/Scores.jsx'
 import navBar from './components/Nav';
 
 function App() {
@@ -17,6 +18,10 @@ function App() {
         <Route
           path='/'
           element={<Homepage />}
+        />
+        <Route
+          path='/:league'
+          element={<Scores />}
         />
       </Routes>
     </Router>
