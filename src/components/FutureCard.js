@@ -3,34 +3,34 @@ import { Link } from 'react-router-dom';
 
 export default function FutureCard (homeTeam, awayTeam, homeRecord, awayRecord, startTime, date) {
     return (
-        <a className="scoreCard" to="/">
+        <Link className="scoreCard" to="/">
             <div className="teamInfo">
                 <div className="teams">
                     <div>
-                        City Team
+                        {homeTeam}
                     </div>
                     <div>
-                        Town Crew
+                        {awayTeam}
                     </div>
                 </div>
                 <div className="records">
                     <div>
-                        1-5
+                        {homeRecord}
                     </div>
                     <div>
-                        4-2
+                        {awayRecord}
                     </div>
                 </div>
             </div>
             <div className="dateTime">
                 <div>
-                    1:10 PM
+                    {startTime}
                 </div>
                 <div>
-                    3/13
+                    {date}
                 </div>
             </div>
             <span className="cardLine"/>
-        </a>
+        </Link>
     )
 }
