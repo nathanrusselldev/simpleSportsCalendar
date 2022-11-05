@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 function NavButton({content, sendTo, onClick}) {
     if (onClick) {
         return (
-            <button className={content + ' leagueButton'} onClick={onClick}>
+            <Link className={content + ' leagueButton'} onClick={onClick} to={sendTo}>
                 {content}
-            </button>
+            </Link>
         )
     }
     return ( 
