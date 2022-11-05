@@ -9,8 +9,12 @@ const options = {
   };
   
   axios.request(options).then(function (response) {
-    console.log(response.data.DATA[96])
-    console.log(response.data.DATA[96].NAME);
+    console.log(response.data.DATA[96].NAME_PART_2);
+    console.log(response.data.DATA[96].EVENTS[0].AWAY_NAME);
+    console.log(response.data.DATA[96].EVENTS[0].AWAY_IMAGES);
+    console.log(response.data.DATA[96].EVENTS[0].HOME_NAME);
+    console.log(response.data.DATA[96].EVENTS[0].HOME_IMAGES);
+    console.log(response.data.DATA[96].EVENTS[0].START_TIME);
   }).catch(function (error) {
     console.error(error);
   });
