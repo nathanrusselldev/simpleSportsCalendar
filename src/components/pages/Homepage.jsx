@@ -4,9 +4,6 @@ import SportsNav from '../SportsNav'
 
 export default function Homepage() {
   return (
-    <div className='navs'>
-      <Nav />
-      <SportsNav />
-    </div>
+    <div>Hi there</div>
   );
 }
