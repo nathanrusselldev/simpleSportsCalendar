@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+:root {
+  --primary: #0c143f;
+  --secondary: #304fee;
+  --text: white;
+  --alt-text: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.navBar {
+  background-color: var(--primary);
+  color: var(--text);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 5px solid var(--secondary);
+}
+
+.leagueButton {
+  margin: 5px;
+  width: 4rem;
+  min-height: 2rem;
+  background-color: var(--primary);
+  border: 3px solid var(--secondary);
+  text-align: center;
+  color: var(--text);
+  text-decoration: none;
+  line-height: 2rem;
+}
+
+.activeLeague {
+  background-color: var(--secondary);
+}
+
+.header {
+  margin-left: 1rem;
+}
+
+.cardContainer {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+}
+
+.scoreCard {
+  position: relative;
+  background-color: var(--primary);
   color: white;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 80%;
+  max-width: 55rem;
+
+  line-height: 1.5rem;
+  padding: 5px;
+  margin-bottom: 1rem;
+
+  border: 3px solid var(--primary);
+  transition: ease-in-out 100ms;
 }
 
-.App-link {
-  color: #61dafb;
+.scoreCard:hover {
+  border: 3px solid var(--secondary);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.teamInfo {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-line {
+  position: absolute;
+  bottom: 49%;
+  left: .5%;
+  background-color: var(--secondary);
+  height: 1px;
+  width: 99%;
 }
