@@ -22,34 +22,32 @@ export default function Navbar() {
           axios.request(options).then(function (response) {
             setData(response)
             
-            // console.log(response.data.DATA[96].NAME_PART_2);
-            // console.log(response.data.DATA[96].EVENTS[0].AWAY_NAME);
-            // console.log(response.data.DATA[96].EVENTS[0].AWAY_IMAGES);
-            // console.log(response.data.DATA[96].EVENTS[0].HOME_NAME);
-            // console.log(response.data.DATA[96].EVENTS[0].HOME_IMAGES);
-            // console.log(response.data.DATA[96].EVENTS[0].START_TIME);
-            
           }).catch(function (error) {
             console.error(error);
           });
     }
-    useEffect(() => {
-        getData()
-    }, []) 
-
+    // useEffect(() => {
+    //     getData()
+    // }, []) 
+    console.log(data)
     useEffect(() => {
 
     })
-    console.log(activeLeague)
+    if(activeLeague )
+
         return (
+            
             <div className="sportsNavDiv">
                 <nav id="sportsNavButtons">
                     <NavButton onClick={() => setLeague("/nfl")} {...navInnerContent.nfl} />
                     <NavButton onClick={() => setLeague("/mlb")} {...navInnerContent.mlb} />
                     <NavButton onClick={() => setLeague("/nhl")}{...navInnerContent.nhl} />
-                    <NavButton data={data} onClick={() => setLeague("/nba")}{...navInnerContent.nba} />
+                    <NavButton onClick={() => setLeague("/nba")}{...navInnerContent.nba} />
                     <NavButton onClick={() => setLeague("/mls")}{...navInnerContent.mls} />
                 </nav>
+                <div className='scheduleRender'>
+            
+                </div>
             </div>
         )
 }
