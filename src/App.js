@@ -5,8 +5,15 @@ import SportsNav from './components/SportsNav'
 import './App.css';
 import Homepage from './components/pages/Homepage.jsx'
 import Scores from './components/Scores.jsx'
+import { useEffect, useState } from 'react';
+import DataCall from './components/DataCall'
 
 function App() {
+  const [data, setData] = useState([])
+  useEffect(() => {
+    DataCall()
+    .then((res) => {setData(res)})
+  }, [])
   return (
     <Router>
       <div className='navs'>
@@ -21,6 +28,7 @@ function App() {
         <Route
           path='/:league'
           element={<Scores 
+          props={data}
           />}
         />
       </Routes>

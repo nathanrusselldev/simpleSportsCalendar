@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-export default function DataCall() {
+export default async function DataCall() {
+    let data = []
     const options = {
         method: 'GET',
         url: 'https://flashlive-sports.p.rapidapi.com/v1/events/list',
@@ -11,23 +12,7 @@ export default function DataCall() {
         }
       };
       
-      axios.request(options).then(function (response) {
-        
-        console.log(response)
-        // console.log(response.data.DATA[84].NAME_PART_2);
-        // console.log(response.data.DATA[84].EVENTS[0].AWAY_NAME);
-        // console.log(response.data.DATA[84].EVENTS[0].AWAY_IMAGES);
-        // console.log(response.data.DATA[84].EVENTS[0].HOME_NAME);
-        // console.log(response.data.DATA[84].EVENTS[0].HOME_IMAGES);
-        // console.log(response.data.DATA[84].EVENTS[0].START_TIME);
-        
-        if(response.status = 200) {
-            return response.data
-        }
-        
-    }).catch(function (error) {
-        console.error(error);
-    });
-
+      data = await axios.request(options)
+      return data.data
 
 }

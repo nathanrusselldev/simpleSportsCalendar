@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-export default function FutureCard (homeTeam, awayTeam, homeRecord, awayRecord, startTime, date) {
+export default function FutureCard ({homeTeam, awayTeam, homeRecord, awayRecord, startTime}) {
     return (
         <Link className="scoreCard" to="/">
             <div className="teamInfo">
@@ -27,7 +27,7 @@ export default function FutureCard (homeTeam, awayTeam, homeRecord, awayRecord, 
                     {startTime}
                 </div>
                 <div>
-                    {date}
+                    {startTime}
                 </div>
             </div>
             <span className="cardLine"/>
