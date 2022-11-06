@@ -1,17 +1,18 @@
 :root {
-  --primary: #0c143f;
-  --secondary: #304fee;
+  --primary: #395f9d;
+  --secondary: #212e74;
+  --tertiary: #e16c73;
   --text: white;
   --alt-text: black;
+  --font-heading: 
 }
 
 .navBar {
-  background-color: var(--primary);
+  background: rgb(57,95,157);
+  background: linear-gradient(180deg, rgba(57,95,157,1) 0%, rgba(33,46,116,1) 100%);
   color: var(--text);
-
   display: flex;
   justify-content: space-between;
-  border-bottom: 5px solid var(--secondary);
 }
 
 .leagueButton {
@@ -24,6 +25,16 @@
   color: var(--text);
   text-decoration: none;
   line-height: 2rem;
+  transition: width 1s ease-out, background-color 2s linear;
+}
+
+.leagueButton:hover {
+  width: 6rem;
+  background-color: var(--secondary);
+}
+
+.firstLetterSpan {
+  color: var(--tertiary)
 }
 
 .activeLeague {
