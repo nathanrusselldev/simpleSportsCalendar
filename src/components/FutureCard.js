@@ -1,33 +1,35 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import { getDate } from "../utils/getDate";
 
-export default function FutureCard ({homeTeam, awayTeam, homeRecord, awayRecord, startTime}) {
+export default function FutureCard (props) {
+    console.log(props.props.HOME_NAME)
     return (
         <Link className="scoreCard" to="/">
             <div className="teamInfo">
                 <div className="teams">
                     <div>
-                        {homeTeam}
+                        {props.props.HOME_NAME}
                     </div>
                     <div>
-                        {awayTeam}
+                        {props.props.AWAY_NAME}
                     </div>
                 </div>
                 <div className="records">
                     <div>
-                        {homeRecord}
+                       7-1
                     </div>
                     <div>
-                        {awayRecord}
+                     8-1
                     </div>
                 </div>
             </div>
             <div className="dateTime">
                 <div>
-                    {startTime}
+                   {getDate(props.props.START_UTIME)}
                 </div>
                 <div>
-                    {startTime}
+                  
                 </div>
             </div>
             <span className="cardLine"/>
